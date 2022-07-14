@@ -10,8 +10,7 @@ I'd obviously rather just use CSS but sometimes spacing needs to be content awar
 
 - **data-overlap**: The amount of overlap you want, accepts % or px, defaults to %. Ie: 45% or 100px.
 - **data-overlap-closest**: The root container element to break out of if not a direct child of that element.
-- **data-overlap-breakpoints**:   
-Responsive changes to the overlap in a delimited string of  `screensize:amount`  separated with a semicolon. 0 disables the overlap completely. ie:  `1024:50%;768:30%;500:100px:400:0`
+- **data-overlap-breakpoints**: Responsive changes to the overlap in a delimited string of  `screensize:amount`  separated with a semicolon. 0 disables the overlap completely. ie:  `1024:50%;768:30%;500:100px:400:0`
 
 #### Example DOM Layout
 
@@ -19,14 +18,18 @@ Responsive changes to the overlap in a delimited string of  `screensize:amount` 
 <main class="overlapper-container">
     <section />
     <section>
-        <div class="section-overlap" /> ← 🧙‍ Magic
+        <div data-overlap /> ← 🧙‍ Magic / basic
     </section> 
     <section />
     <section />
     <section>
 	    <div class="inner-wrapper">
-	        <div class="section-overlap" data-overlap-closest="section" /> ← 🧙‍ Magic
-        </div>
+        <div
+          data-overlap="40%"
+          data-overlap-closest="section"
+          data-overlap-breakpoints="768:35%;600:100px;400:0"
+        /> ← 🧙‍ Magic with options
+      </div>
     </section>
     <section />
     <section />
@@ -36,7 +39,7 @@ Responsive changes to the overlap in a delimited string of  `screensize:amount` 
 #### Instatiate:
 
 ```
-Array.from(document.getElementsByClassName('section-overlap')).forEach(function (el) {
+Array.from(document.querySelectorAll('div[data-overlap]')).forEach(function (el) {
   new Overlapt(el)
 })
 ```

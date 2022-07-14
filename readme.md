@@ -32,3 +32,11 @@ Responsive changes to the overlap in a delimited string of  `screensize:amount` 
     <section />
 </main>
 ```
+
+#### Instatiate:
+
+```
+Array.from(document.getElementsByClassName('section-overlap')).forEach(function (el) {
+  new Overlapt(el)
+})
+```

@@ -4,6 +4,8 @@ Making DOM elements that overlap from one section to another is a **pain!** So I
 
 I'd obviously rather just use CSS but sometimes spacing needs to be content aware and that's why I'm leveraging javascript.
 
+[See a demo on CodePen](https://codepen.io/chrisladams/pen/wvmowNz)
+
 ### Data Parameters:
 
 ----
@@ -23,7 +25,7 @@ I'd obviously rather just use CSS but sometimes spacing needs to be content awar
     <section />
     <section />
     <section>
-	    <div class="inner-wrapper">
+      <div class="inner-wrapper">
         <div
           data-overlap="40%"
           data-overlap-closest="section"

@@ -38,10 +38,20 @@ I'd obviously rather just use CSS but sometimes spacing needs to be content awar
 </main>
 ```
 
-#### Instatiate:
+#### Instantiate:
+
+VanillaJS
 
 ```
 Array.from(document.querySelectorAll('div[data-overlap]')).forEach(function (el) {
   new Overlapt(el)
+})
+```
+
+jQuery
+
+```
+$('div[data-overlap]').each(function () {
+  new Overlapt($(this).get(0))
 })
 ```

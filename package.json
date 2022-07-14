@@ -1,6 +1,6 @@
 {
   "name": "overlapt",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple javascript helper for vertically overlapping dom elements",
   "main": "index.js",
   "scripts": {

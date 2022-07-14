@@ -1,6 +1,6 @@
 # Overlapt
 
-Making DOM elements that overlap from one section to another is a **pain!** So I wrote some simple ~~jQuery~~  VANILLA JAVASCRIPT package to help alleviate that pain.
+Making DOM elements that overlap from one section to another is a **pain!** So I wrote a simple ~~jQuery~~  VanillaJS package to help alleviate that pain.
 
 I'd obviously rather just use CSS but sometimes spacing needs to be content aware and that's why I'm leveraging javascript.
 
@@ -39,6 +39,18 @@ I'd obviously rather just use CSS but sometimes spacing needs to be content awar
 ```
 
 #### Instantiate:
+
+Import or require package
+
+```
+import Overlapt from 'overlapt'
+```
+
+or
+
+```
+const Overlapt = require('overlapt')
+```
 
 VanillaJS
 
